@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import ABFRealmMapView
+import RealmMapView
 
-class CustomAnnotationView: ABFClusterAnnotationView, Identifiable {
+class CustomAnnotationView: ClusterAnnotationView, Identifiable {
   
   // MARK: - CONFIGURATION
   
-  static func new(with annotation: ABFAnnotation) -> CustomAnnotationView {
+  static func new(with annotation: Annotation) -> CustomAnnotationView {
     let newAnnotationView = CustomAnnotationView(annotation: annotation, reuseIdentifier: CustomAnnotationView.identifier)
     newAnnotationView.count = UInt(annotation.safeObjects.count)
     newAnnotationView.color = UIColor(hex: "3C5193")
@@ -30,7 +30,7 @@ class CustomAnnotationView: ABFClusterAnnotationView, Identifiable {
     return newAnnotationView
   }
   
-  func update(with annotation: ABFAnnotation) -> CustomAnnotationView {
+  func update(with annotation: Annotation) -> CustomAnnotationView {
     self.count = UInt(annotation.safeObjects.count)
     self.annotation = annotation
     switch annotation.type {
