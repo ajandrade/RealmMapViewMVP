@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9V3-fF-dGL" customClass="RealmMapView" customModule="RealmMapView">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="entityName" value="ABFRestaurantObject"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="latitudeKeyPath" value="latitude"/>
@@ -30,15 +30,36 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="subtitleKeyPath" value="phoneNumber"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="canShowCallout" value="NO"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="xuD-eJ-u6M"/>
+                    </connections>
                 </mapView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSv-Xu-gSg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="GVW-3v-xt0"/>
+                    </constraints>
+                    <color key="barTintColor" red="0.23529411759999999" green="0.31764705879999999" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <textAttributes key="titleTextAttributes">
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="RealmMapView" id="jvl-2T-2o0"/>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="hSv-Xu-gSg" secondAttribute="trailing" id="1oc-40-CP3"/>
+                <constraint firstItem="9V3-fF-dGL" firstAttribute="top" secondItem="hSv-Xu-gSg" secondAttribute="bottom" id="Bld-UK-D3d"/>
+                <constraint firstItem="hSv-Xu-gSg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DXp-96-AcK"/>
                 <constraint firstAttribute="trailing" secondItem="9V3-fF-dGL" secondAttribute="trailing" id="HwW-Ls-wFa"/>
                 <constraint firstItem="9V3-fF-dGL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LLh-Wr-t3Z"/>
                 <constraint firstAttribute="bottom" secondItem="9V3-fF-dGL" secondAttribute="bottom" id="TbW-xr-piX"/>
-                <constraint firstItem="9V3-fF-dGL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="a2j-Ws-OzX"/>
+                <constraint firstItem="hSv-Xu-gSg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="oOE-E0-2NF"/>
             </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
 </document>

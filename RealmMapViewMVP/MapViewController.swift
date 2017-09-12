@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 import RealmMapView
 
 class MapViewController: UIViewController {
@@ -27,4 +28,18 @@ class MapViewController: UIViewController {
     super.viewDidLoad()
   }
   
+}
+
+extension MapViewController: MKMapViewDelegate {
+
+  func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    guard let fetchedAnnotation = annotation as? Annotation else { return nil }
+    
+    guard let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: CustomAnnotationView.identifier) as? CustomAnnotationView else {
+      return CustomAnnotationView.new(with: fetchedAnnotation)
+    }
+    
+    return annotationView.update(with: fetchedAnnotation)
+  }
+
 }
