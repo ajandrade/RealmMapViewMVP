@@ -11,6 +11,9 @@
 		E07367171F68759D00F587AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07367161F68759D00F587AC /* AppDelegate.swift */; };
 		E073671E1F68759D00F587AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E073671D1F68759D00F587AC /* Assets.xcassets */; };
 		E07367291F6877FD00F587AC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E07367281F6877FD00F587AC /* Launch Screen.storyboard */; };
+		E07367331F68795200F587AC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07367311F68795200F587AC /* MapViewController.swift */; };
+		E07367341F68795200F587AC /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07367321F68795200F587AC /* MapViewController.xib */; };
+		E07367361F68798300F587AC /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07367351F68798300F587AC /* MapPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		E073671D1F68759D00F587AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E07367221F68759D00F587AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E07367281F6877FD00F587AC /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E07367311F68795200F587AC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E07367321F68795200F587AC /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		E07367351F68798300F587AC /* MapPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
 		E44C11FE3076D63239ED7651 /* Pods-RealmMapViewMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmMapViewMVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmMapViewMVP/Pods-RealmMapViewMVP.debug.xcconfig"; sourceTree = "<group>"; };
 		E8CB7AFE7291589CEEBDEFE0 /* Pods_RealmMapViewMVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmMapViewMVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +80,7 @@
 		E07367151F68759D00F587AC /* RealmMapViewMVP */ = {
 			isa = PBXGroup;
 			children = (
+				E07367301F68792E00F587AC /* Navigation */,
 				E073672F1F6878AE00F587AC /* Managers */,
 				E073672A1F68780900F587AC /* Contexts */,
 				E073672E1F68787900F587AC /* CustomViews */,
@@ -105,6 +112,9 @@
 		E073672C1F68782C00F587AC /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				E07367311F68795200F587AC /* MapViewController.swift */,
+				E07367321F68795200F587AC /* MapViewController.xib */,
+				E07367351F68798300F587AC /* MapPresenter.swift */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -128,6 +138,13 @@
 			children = (
 			);
 			name = Managers;
+			sourceTree = "<group>";
+		};
+		E07367301F68792E00F587AC /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E07367291F6877FD00F587AC /* Launch Screen.storyboard in Resources */,
+				E07367341F68795200F587AC /* MapViewController.xib in Resources */,
 				E073671E1F68759D00F587AC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +272,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E07367171F68759D00F587AC /* AppDelegate.swift in Sources */,
+				E07367331F68795200F587AC /* MapViewController.swift in Sources */,
+				E07367361F68798300F587AC /* MapPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
