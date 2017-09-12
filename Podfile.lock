@@ -1,0 +1,37 @@
+PODS:
+  - ABFRealmMapView (2.1.3):
+    - RBQSafeRealmObject
+    - Realm (>= 0.98)
+  - RBQSafeRealmObject (1.1):
+    - Realm (>= 0.99.1)
+    - RealmUtilities (>= 0.2.1)
+  - Realm (2.10.0):
+    - Realm/Headers (= 2.10.0)
+  - Realm/Headers (2.10.0)
+  - RealmMapView (2.1.3):
+    - ABFRealmMapView (>= 2.1.3)
+    - RBQSafeRealmObject
+    - RealmSwift (>= 2.1.1)
+  - RealmSwift (2.10.0):
+    - Realm (= 2.10.0)
+  - RealmSwiftSFRestaurantData (0.5):
+    - RealmSwift (>= 0.96)
+  - RealmUtilities (0.4):
+    - Realm (>= 0.95)
+
+DEPENDENCIES:
+  - RealmMapView
+  - RealmSwiftSFRestaurantData
+
+SPEC CHECKSUMS:
+  ABFRealmMapView: 52566666a6e3206631150da747d9a5e52750a468
+  RBQSafeRealmObject: 128e6ece2acceeb7dea9d00b8fa40ba4c489c3fa
+  Realm: 98b3a25643cf6b3e07d2b99fb43fe0eb9c801dec
+  RealmMapView: 01d840ea663d5309697f911ba1afd12386f65130
+  RealmSwift: 34073ad3a31232bbaf7c0db898c037940284cba2
+  RealmSwiftSFRestaurantData: 49d664a3e4f30b93aa6107645ed0bfa1f326e507
+  RealmUtilities: bd4d18141e62a6cdcfa1859f1f090a27ab282628
+
+PODFILE CHECKSUM: e79718e8bc5119c5f2b0822fb05a0300712f7bf3
+
+COCOAPODS: 1.2.1

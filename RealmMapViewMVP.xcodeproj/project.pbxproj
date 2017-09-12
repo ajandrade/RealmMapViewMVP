@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		284CD26CB0B0F51668915014 /* Pods_RealmMapViewMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CB7AFE7291589CEEBDEFE0 /* Pods_RealmMapViewMVP.framework */; };
 		E07367171F68759D00F587AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07367161F68759D00F587AC /* AppDelegate.swift */; };
 		E07367191F68759D00F587AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07367181F68759D00F587AC /* ViewController.swift */; };
 		E073671C1F68759D00F587AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E073671A1F68759D00F587AC /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C4B7DDFB504D9797F2B8ABD /* Pods-RealmMapViewMVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmMapViewMVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmMapViewMVP/Pods-RealmMapViewMVP.release.xcconfig"; sourceTree = "<group>"; };
 		E07367131F68759D00F587AC /* RealmMapViewMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmMapViewMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07367161F68759D00F587AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E07367181F68759D00F587AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		E073671D1F68759D00F587AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E07367201F68759D00F587AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E07367221F68759D00F587AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E44C11FE3076D63239ED7651 /* Pods-RealmMapViewMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmMapViewMVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmMapViewMVP/Pods-RealmMapViewMVP.debug.xcconfig"; sourceTree = "<group>"; };
+		E8CB7AFE7291589CEEBDEFE0 /* Pods_RealmMapViewMVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmMapViewMVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				284CD26CB0B0F51668915014 /* Pods_RealmMapViewMVP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C0260B4F3E003189E8E1E16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E44C11FE3076D63239ED7651 /* Pods-RealmMapViewMVP.debug.xcconfig */,
+				3C4B7DDFB504D9797F2B8ABD /* Pods-RealmMapViewMVP.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CA28BC8953CD2646131DD205 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8CB7AFE7291589CEEBDEFE0 /* Pods_RealmMapViewMVP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E073670A1F68759D00F587AC = {
 			isa = PBXGroup;
 			children = (
 				E07367151F68759D00F587AC /* RealmMapViewMVP */,
 				E07367141F68759D00F587AC /* Products */,
+				0C0260B4F3E003189E8E1E16 /* Pods */,
+				CA28BC8953CD2646131DD205 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E07367251F68759D00F587AC /* Build configuration list for PBXNativeTarget "RealmMapViewMVP" */;
 			buildPhases = (
+				D22AC8548F6AA4A5B57FB571 /* [CP] Check Pods Manifest.lock */,
 				E073670F1F68759D00F587AC /* Sources */,
 				E07367101F68759D00F587AC /* Frameworks */,
 				E07367111F68759D00F587AC /* Resources */,
+				4763098D997657ED0FE18F7F /* [CP] Embed Pods Frameworks */,
+				242A149D6E414A6F96A6D99D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		242A149D6E414A6F96A6D99D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmMapViewMVP/Pods-RealmMapViewMVP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4763098D997657ED0FE18F7F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmMapViewMVP/Pods-RealmMapViewMVP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D22AC8548F6AA4A5B57FB571 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E073670F1F68759D00F587AC /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		E07367261F68759D00F587AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E44C11FE3076D63239ED7651 /* Pods-RealmMapViewMVP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P8WVW27EH5;
@@ -272,6 +348,7 @@
 		};
 		E07367271F68759D00F587AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C4B7DDFB504D9797F2B8ABD /* Pods-RealmMapViewMVP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P8WVW27EH5;

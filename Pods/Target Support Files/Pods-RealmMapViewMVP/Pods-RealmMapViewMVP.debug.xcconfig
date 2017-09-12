@@ -1,0 +1,11 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/ABFRealmMapView" "$PODS_CONFIGURATION_BUILD_DIR/RBQSafeRealmObject" "$PODS_CONFIGURATION_BUILD_DIR/Realm" "$PODS_CONFIGURATION_BUILD_DIR/RealmMapView" "$PODS_CONFIGURATION_BUILD_DIR/RealmSwift" "$PODS_CONFIGURATION_BUILD_DIR/RealmSwiftSFRestaurantData" "$PODS_CONFIGURATION_BUILD_DIR/RealmUtilities"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/ABFRealmMapView/ABFRealmMapView.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/RBQSafeRealmObject/RBQSafeRealmObject.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Realm/Realm.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/RealmMapView/RealmMapView.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/RealmSwift/RealmSwift.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/RealmSwiftSFRestaurantData/RealmSwiftSFRestaurantData.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/RealmUtilities/RealmUtilities.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "ABFRealmMapView" -framework "RBQSafeRealmObject" -framework "Realm" -framework "RealmMapView" -framework "RealmSwift" -framework "RealmSwiftSFRestaurantData" -framework "RealmUtilities"
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
