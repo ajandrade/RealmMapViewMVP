@@ -9,21 +9,17 @@
 /* Begin PBXBuildFile section */
 		284CD26CB0B0F51668915014 /* Pods_RealmMapViewMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CB7AFE7291589CEEBDEFE0 /* Pods_RealmMapViewMVP.framework */; };
 		E07367171F68759D00F587AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07367161F68759D00F587AC /* AppDelegate.swift */; };
-		E07367191F68759D00F587AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07367181F68759D00F587AC /* ViewController.swift */; };
-		E073671C1F68759D00F587AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E073671A1F68759D00F587AC /* Main.storyboard */; };
 		E073671E1F68759D00F587AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E073671D1F68759D00F587AC /* Assets.xcassets */; };
-		E07367211F68759D00F587AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E073671F1F68759D00F587AC /* LaunchScreen.storyboard */; };
+		E07367291F6877FD00F587AC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E07367281F6877FD00F587AC /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C4B7DDFB504D9797F2B8ABD /* Pods-RealmMapViewMVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmMapViewMVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmMapViewMVP/Pods-RealmMapViewMVP.release.xcconfig"; sourceTree = "<group>"; };
 		E07367131F68759D00F587AC /* RealmMapViewMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmMapViewMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07367161F68759D00F587AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E07367181F68759D00F587AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E073671B1F68759D00F587AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E073671D1F68759D00F587AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E07367201F68759D00F587AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E07367221F68759D00F587AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E07367281F6877FD00F587AC /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E44C11FE3076D63239ED7651 /* Pods-RealmMapViewMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmMapViewMVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmMapViewMVP/Pods-RealmMapViewMVP.debug.xcconfig"; sourceTree = "<group>"; };
 		E8CB7AFE7291589CEEBDEFE0 /* Pods_RealmMapViewMVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmMapViewMVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,14 +74,60 @@
 		E07367151F68759D00F587AC /* RealmMapViewMVP */ = {
 			isa = PBXGroup;
 			children = (
-				E07367161F68759D00F587AC /* AppDelegate.swift */,
-				E07367181F68759D00F587AC /* ViewController.swift */,
-				E073671A1F68759D00F587AC /* Main.storyboard */,
-				E073671D1F68759D00F587AC /* Assets.xcassets */,
-				E073671F1F68759D00F587AC /* LaunchScreen.storyboard */,
-				E07367221F68759D00F587AC /* Info.plist */,
+				E073672F1F6878AE00F587AC /* Managers */,
+				E073672A1F68780900F587AC /* Contexts */,
+				E073672E1F68787900F587AC /* CustomViews */,
+				E073672B1F68781300F587AC /* Resources */,
 			);
 			path = RealmMapViewMVP;
+			sourceTree = "<group>";
+		};
+		E073672A1F68780900F587AC /* Contexts */ = {
+			isa = PBXGroup;
+			children = (
+				E07367161F68759D00F587AC /* AppDelegate.swift */,
+				E073672C1F68782C00F587AC /* Map */,
+				E073672D1F68783500F587AC /* RestaurantDetails */,
+			);
+			name = Contexts;
+			sourceTree = "<group>";
+		};
+		E073672B1F68781300F587AC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E073671D1F68759D00F587AC /* Assets.xcassets */,
+				E07367221F68759D00F587AC /* Info.plist */,
+				E07367281F6877FD00F587AC /* Launch Screen.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E073672C1F68782C00F587AC /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		E073672D1F68783500F587AC /* RestaurantDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RestaurantDetails;
+			sourceTree = "<group>";
+		};
+		E073672E1F68787900F587AC /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
+		E073672F1F6878AE00F587AC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +193,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E07367211F68759D00F587AC /* LaunchScreen.storyboard in Resources */,
+				E07367291F6877FD00F587AC /* Launch Screen.storyboard in Resources */,
 				E073671E1F68759D00F587AC /* Assets.xcassets in Resources */,
-				E073671C1F68759D00F587AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,31 +253,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E07367191F68759D00F587AC /* ViewController.swift in Sources */,
 				E07367171F68759D00F587AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E073671A1F68759D00F587AC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E073671B1F68759D00F587AC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E073671F1F68759D00F587AC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E07367201F68759D00F587AC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E07367231F68759D00F587AC /* Debug */ = {
@@ -379,6 +400,7 @@
 				E07367271F68759D00F587AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
