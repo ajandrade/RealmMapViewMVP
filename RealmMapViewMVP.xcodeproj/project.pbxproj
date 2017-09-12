@@ -18,6 +18,9 @@
 		E073673A1F687A2F00F587AC /* NavigationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07367391F687A2F00F587AC /* NavigationScene.swift */; };
 		E073673C1F687A7500F587AC /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073673B1F687A7500F587AC /* Navigator.swift */; };
 		E073673E1F687D9200F587AC /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073673D1F687D9200F587AC /* RealmConfig.swift */; };
+		E07367401F688F6200F587AC /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073673F1F688F6200F587AC /* CustomAnnotationView.swift */; };
+		E07367431F688F8500F587AC /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07367421F688F8500F587AC /* Identifiable.swift */; };
+		E07367461F68943D00F587AC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07367451F68943D00F587AC /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		E07367391F687A2F00F587AC /* NavigationScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationScene.swift; sourceTree = "<group>"; };
 		E073673B1F687A7500F587AC /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		E073673D1F687D9200F587AC /* RealmConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
+		E073673F1F688F6200F587AC /* CustomAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
+		E07367421F688F8500F587AC /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		E07367451F68943D00F587AC /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		E44C11FE3076D63239ED7651 /* Pods-RealmMapViewMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmMapViewMVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmMapViewMVP/Pods-RealmMapViewMVP.debug.xcconfig"; sourceTree = "<group>"; };
 		E8CB7AFE7291589CEEBDEFE0 /* Pods_RealmMapViewMVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmMapViewMVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,6 +94,8 @@
 		E07367151F68759D00F587AC /* RealmMapViewMVP */ = {
 			isa = PBXGroup;
 			children = (
+				E07367441F6893EF00F587AC /* Extension */,
+				E07367411F688F7800F587AC /* Protocols */,
 				E07367301F68792E00F587AC /* Navigation */,
 				E073672F1F6878AE00F587AC /* Managers */,
 				E073672A1F68780900F587AC /* Contexts */,
@@ -137,6 +145,7 @@
 		E073672E1F68787900F587AC /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				E073673F1F688F6200F587AC /* CustomAnnotationView.swift */,
 			);
 			name = CustomViews;
 			sourceTree = "<group>";
@@ -157,6 +166,22 @@
 				E07367391F687A2F00F587AC /* NavigationScene.swift */,
 			);
 			name = Navigation;
+			sourceTree = "<group>";
+		};
+		E07367411F688F7800F587AC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E07367421F688F8500F587AC /* Identifiable.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		E07367441F6893EF00F587AC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E07367451F68943D00F587AC /* UIColor.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,9 +312,12 @@
 				E073673A1F687A2F00F587AC /* NavigationScene.swift in Sources */,
 				E07367171F68759D00F587AC /* AppDelegate.swift in Sources */,
 				E07367331F68795200F587AC /* MapViewController.swift in Sources */,
+				E07367431F688F8500F587AC /* Identifiable.swift in Sources */,
 				E07367381F687A1300F587AC /* NavigationTransitionType.swift in Sources */,
 				E07367361F68798300F587AC /* MapPresenter.swift in Sources */,
+				E07367401F688F6200F587AC /* CustomAnnotationView.swift in Sources */,
 				E073673C1F687A7500F587AC /* Navigator.swift in Sources */,
+				E07367461F68943D00F587AC /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
