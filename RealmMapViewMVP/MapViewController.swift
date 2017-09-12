@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmMapView
 
 class MapViewController: UIViewController {
   
@@ -14,6 +15,12 @@ class MapViewController: UIViewController {
   
   var presenter: MapPresenterRepresentable!
   
+  // MARK: - IBOUTLETS
+
+  @IBOutlet private weak var mapView: RealmMapView! {
+    didSet { mapView.realmConfiguration = RealmConfig.main.configuration }
+  }
+
   // MARK: - VIEW LIFE CYCLE
   
   override func viewDidLoad() {
