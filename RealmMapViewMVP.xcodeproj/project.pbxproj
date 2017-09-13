@@ -21,6 +21,11 @@
 		E07367401F688F6200F587AC /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073673F1F688F6200F587AC /* CustomAnnotationView.swift */; };
 		E07367431F688F8500F587AC /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07367421F688F8500F587AC /* Identifiable.swift */; };
 		E07367461F68943D00F587AC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07367451F68943D00F587AC /* UIColor.swift */; };
+		E07367481F69CF7900F587AC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07367471F69CF7900F587AC /* LocationManager.swift */; };
+		E073674B1F69D28100F587AC /* LocationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073674A1F69D28100F587AC /* LocationError.swift */; };
+		E073674D1F69D76C00F587AC /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073674C1F69D76C00F587AC /* Alertable.swift */; };
+		E073674F1F69DADC00F587AC /* MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073674E1F69DADC00F587AC /* MKMapView.swift */; };
+		E07367511F69DB6D00F587AC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07367501F69DB6D00F587AC /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		E073673F1F688F6200F587AC /* CustomAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		E07367421F688F8500F587AC /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		E07367451F68943D00F587AC /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		E07367471F69CF7900F587AC /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		E073674A1F69D28100F587AC /* LocationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationError.swift; sourceTree = "<group>"; };
+		E073674C1F69D76C00F587AC /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		E073674E1F69DADC00F587AC /* MKMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapView.swift; sourceTree = "<group>"; };
+		E07367501F69DB6D00F587AC /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		E44C11FE3076D63239ED7651 /* Pods-RealmMapViewMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmMapViewMVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmMapViewMVP/Pods-RealmMapViewMVP.debug.xcconfig"; sourceTree = "<group>"; };
 		E8CB7AFE7291589CEEBDEFE0 /* Pods_RealmMapViewMVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmMapViewMVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,6 +104,7 @@
 		E07367151F68759D00F587AC /* RealmMapViewMVP */ = {
 			isa = PBXGroup;
 			children = (
+				E07367491F69D27800F587AC /* Enums */,
 				E07367441F6893EF00F587AC /* Extension */,
 				E07367411F688F7800F587AC /* Protocols */,
 				E07367301F68792E00F587AC /* Navigation */,
@@ -154,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				E073673D1F687D9200F587AC /* RealmConfig.swift */,
+				E07367471F69CF7900F587AC /* LocationManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -172,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				E07367421F688F8500F587AC /* Identifiable.swift */,
+				E073674C1F69D76C00F587AC /* Alertable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -180,8 +193,18 @@
 			isa = PBXGroup;
 			children = (
 				E07367451F68943D00F587AC /* UIColor.swift */,
+				E073674E1F69DADC00F587AC /* MKMapView.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		E07367491F69D27800F587AC /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E073674A1F69D28100F587AC /* LocationError.swift */,
+				E07367501F69DB6D00F587AC /* Result.swift */,
+			);
+			name = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,13 +334,18 @@
 				E073673E1F687D9200F587AC /* RealmConfig.swift in Sources */,
 				E073673A1F687A2F00F587AC /* NavigationScene.swift in Sources */,
 				E07367171F68759D00F587AC /* AppDelegate.swift in Sources */,
+				E07367481F69CF7900F587AC /* LocationManager.swift in Sources */,
 				E07367331F68795200F587AC /* MapViewController.swift in Sources */,
+				E073674D1F69D76C00F587AC /* Alertable.swift in Sources */,
+				E07367511F69DB6D00F587AC /* Result.swift in Sources */,
 				E07367431F688F8500F587AC /* Identifiable.swift in Sources */,
 				E07367381F687A1300F587AC /* NavigationTransitionType.swift in Sources */,
 				E07367361F68798300F587AC /* MapPresenter.swift in Sources */,
 				E07367401F688F6200F587AC /* CustomAnnotationView.swift in Sources */,
+				E073674B1F69D28100F587AC /* LocationError.swift in Sources */,
 				E073673C1F687A7500F587AC /* Navigator.swift in Sources */,
 				E07367461F68943D00F587AC /* UIColor.swift in Sources */,
+				E073674F1F69DADC00F587AC /* MKMapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
