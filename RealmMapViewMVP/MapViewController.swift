@@ -19,13 +19,19 @@ class MapViewController: UIViewController {
   // MARK: - IBOUTLETS
 
   @IBOutlet private weak var mapView: RealmMapView! {
-    didSet { mapView.realmConfiguration = RealmConfig.main.configuration }
+    didSet { mapView.realmConfiguration = presenter.realmConfiguration }
   }
 
   // MARK: - VIEW LIFE CYCLE
   
   override func viewDidLoad() {
     super.viewDidLoad()
+  }
+  
+  // MARK: - IBACTIONS
+  
+  @IBAction func onMyLocationPressed(_ sender: UIButton) {
+  
   }
   
 }

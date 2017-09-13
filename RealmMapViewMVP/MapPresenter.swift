@@ -7,9 +7,18 @@
 //
 
 import Foundation
+import RealmSwift
 
-protocol MapPresenterRepresentable { }
+protocol MapPresenterRepresentable {
+  var realmConfiguration: Realm.Configuration { get }
+}
 
 class MapPresenter: MapPresenterRepresentable {
 
+  let realmConfiguration = RealmConfig.main.configuration
+  
+  init() {
+  
+  }
+  
 }
