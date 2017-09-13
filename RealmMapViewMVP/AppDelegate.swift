@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     window = UIWindow()
     let navigator = Navigator(window: window!)
-    let presenter = MapPresenter()
+    let locationManager = LocationManager()
+    let presenter = MapPresenter(locationManager: locationManager)
     let rootViewController = NavigationScene.map(presenter)
     navigator.transition(to: rootViewController, type: .root)
 

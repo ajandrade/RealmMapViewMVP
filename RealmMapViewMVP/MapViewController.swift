@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import RealmMapView
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, Alertable {
   
   // MARK: - DEPENDENCIES
   
@@ -26,12 +26,29 @@ class MapViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    presenter.didUpdateAuthorization = { [weak self] result in
+      switch result {
+      case .success:
+        break
+      case .failure(let error):
+        self?.showAlert(with: error.description)
+      }
+    }
+    
+    presenter.didUpdateUserLocation = { [weak self] result in
+      switch result {
+      case .success(let userLocation):
+        self?.mapView.center(on: userLocation, withRadius: 10000)
+      case .failure(let error):
+        self?.showAlert(with: error.description)
+      }
+    }
   }
   
   // MARK: - IBACTIONS
   
   @IBAction func onMyLocationPressed(_ sender: UIButton) {
-  
+    presenter.requestUserLocation()
   }
   
 }
