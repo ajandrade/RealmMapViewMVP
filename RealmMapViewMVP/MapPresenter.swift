@@ -62,7 +62,7 @@ class MapPresenter: MapPresenterRepresentable {
   // MARK: - NAVIGATION
   
   func showDetails(for restaurant: ABFRestaurantObject) {
-    let detailsPresenter = RestaurantDetailsPresenter()
+    let detailsPresenter = RestaurantDetailsPresenter(navigator: navigator, restaurant: restaurant)
     navigator.transition(to: .details(detailsPresenter), type: .push)
   }
   
