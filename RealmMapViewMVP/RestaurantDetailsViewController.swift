@@ -44,6 +44,10 @@ class RestaurantDetailsViewController: UIViewController {
     presenter.phonePressed()
   }
   
+  @IBAction func onDismissPressed(_ sender: UIBarButtonItem) {
+    presenter.dismissPressed()
+  }
+  
   // MARK: - METHODS
   
   private func setMapPin() {

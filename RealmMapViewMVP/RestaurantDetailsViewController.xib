@@ -38,7 +38,14 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="Restaurant Details" id="uwm-o1-jSP"/>
+                        <navigationItem title="Restaurant Details" id="uwm-o1-jSP">
+                            <barButtonItem key="leftBarButtonItem" image="Back" id="vTh-pb-suC">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="onDismissPressed:" destination="-1" id="hL8-bd-tPy"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
                     </items>
                 </navigationBar>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJA-18-Z96">
@@ -178,6 +185,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Back" width="9" height="16"/>
         <image name="Phone" width="25" height="25"/>
     </resources>
 </document>

@@ -20,6 +20,7 @@ protocol RestaurantDetailsPresenterRepresentable {
   var phoneEnabled: Bool { get }
   
   func phonePressed()
+  func dismissPressed()
 }
 
 struct RestaurantDetailsPresenter: RestaurantDetailsPresenterRepresentable {
@@ -56,6 +57,10 @@ struct RestaurantDetailsPresenter: RestaurantDetailsPresenterRepresentable {
   }
   
   // MARK: - METHODS
+  
+  func dismissPressed() {
+    navigator.pop()
+  }
   
   func phonePressed() {
     // Phone Number is always empty
