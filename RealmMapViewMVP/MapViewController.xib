@@ -39,7 +39,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="GVW-3v-xt0"/>
                     </constraints>
-                    <color key="barTintColor" red="0.20392156862745098" green="0.28627450980392155" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="barTintColor" red="0.23529411759999999" green="0.31764705879999999" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <textAttributes key="titleTextAttributes">
                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

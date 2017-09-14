@@ -16,7 +16,7 @@ class CustomAnnotationView: ClusterAnnotationView, Identifiable {
   static func new(with annotation: Annotation) -> CustomAnnotationView {
     let newAnnotationView = CustomAnnotationView(annotation: annotation, reuseIdentifier: CustomAnnotationView.identifier)
     newAnnotationView.count = UInt(annotation.safeObjects.count)
-    newAnnotationView.color = UIColor(hex: "34495E")
+    newAnnotationView.color = UIColor(hex: "3C5193")
     
     switch annotation.type {
     case .cluster:
