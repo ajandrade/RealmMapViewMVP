@@ -43,6 +43,9 @@
                 </navigationBar>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJA-18-Z96">
                     <rect key="frame" x="0.0" y="400" width="375" height="267"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Jwz-TM-rVH"/>
+                    </connections>
                 </mapView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qfm-EA-Lyc">
                     <rect key="frame" x="0.0" y="60" width="375" height="340"/>

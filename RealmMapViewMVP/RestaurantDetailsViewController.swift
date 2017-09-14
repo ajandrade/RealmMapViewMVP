@@ -35,6 +35,7 @@ class RestaurantDetailsViewController: UIViewController {
     restaurantPhoneLabel.text = presenter.restaurantPhone
     restaurantRatingLabel.text = presenter.restaurantRating
     phoneButton.isEnabled = presenter.phoneEnabled
+    setMapPin()
   }
   
   // MARK: - IBACTIONS
@@ -42,5 +43,27 @@ class RestaurantDetailsViewController: UIViewController {
   @IBAction func onPhonePressed(_ sender: UIButton) {
     presenter.phonePressed()
   }
-    
+  
+  // MARK: - METHODS
+  
+  private func setMapPin() {
+    let annotation = MKPointAnnotation()
+    annotation.coordinate = presenter.restaurantCoordinates
+    mapView.addAnnotation(annotation)
+    let region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 250, 250)
+    self.mapView.setRegion(region, animated: false)
+  }
+  
+}
+
+extension RestaurantDetailsViewController: MKMapViewDelegate {
+
+  func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    return CustomAnnotationView.staticAnnotation(from: annotation)
+  }
+  
+  func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+
+  }
+  
 }
