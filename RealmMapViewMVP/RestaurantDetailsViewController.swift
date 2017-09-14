@@ -17,7 +17,12 @@ class RestaurantDetailsViewController: UIViewController {
   
   // MARK: - IBOUTLETS
   
-  @IBOutlet private weak var mapView: MKMapView!
+  @IBOutlet private weak var mapView: MKMapView! {
+    didSet {
+      let tap = UITapGestureRecognizer(target: self, action: #selector(mapPressed))
+      mapView.addGestureRecognizer(tap)
+    }
+  }
   @IBOutlet private weak var restaurantNameLabel: UILabel!
   @IBOutlet private weak var restaurantAddressLabel: UILabel!
   @IBOutlet private weak var restaurantCityLabel: UILabel!
@@ -50,6 +55,10 @@ class RestaurantDetailsViewController: UIViewController {
   
   // MARK: - METHODS
   
+  func mapPressed() {
+    presenter.mapPressed()
+  }
+  
   private func setMapPin() {
     let annotation = MKPointAnnotation()
     annotation.coordinate = presenter.restaurantCoordinates
@@ -65,9 +74,5 @@ extension RestaurantDetailsViewController: MKMapViewDelegate {
   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     return CustomAnnotationView.staticAnnotation(from: annotation)
   }
-  
-  func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
 
-  }
-  
 }

@@ -9,6 +9,7 @@
 import Foundation
 import CoreLocation
 import RealmSwiftSFRestaurantData
+import MapKit
 
 protocol RestaurantDetailsPresenterRepresentable {
   var restaurantName: String { get }
@@ -21,6 +22,7 @@ protocol RestaurantDetailsPresenterRepresentable {
   
   func phonePressed()
   func dismissPressed()
+  func mapPressed()
 }
 
 struct RestaurantDetailsPresenter: RestaurantDetailsPresenterRepresentable {
@@ -57,6 +59,12 @@ struct RestaurantDetailsPresenter: RestaurantDetailsPresenterRepresentable {
   }
   
   // MARK: - METHODS
+  
+  func mapPressed() {
+    let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: restaurantCoordinates, addressDictionary:nil))
+    mapItem.name = restaurantName
+    mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+  }
   
   func dismissPressed() {
     navigator.pop()
