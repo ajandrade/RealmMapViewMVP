@@ -8,10 +8,19 @@
 
 import UIKit
 import RealmMapView
+import MapKit
 
 class CustomAnnotationView: ClusterAnnotationView, Identifiable {
   
   // MARK: - CONFIGURATION
+  
+  static func staticAnnotation(from annotation: MKAnnotation) -> CustomAnnotationView {
+    let newAnnotationView = CustomAnnotationView(annotation: annotation, reuseIdentifier: CustomAnnotationView.identifier)
+    newAnnotationView.color = UIColor(hex: "3C5193")
+    newAnnotationView.countLabel.isHidden = true
+    newAnnotationView.annotation = annotation
+    return newAnnotationView
+  }
   
   static func new(with annotation: Annotation) -> CustomAnnotationView {
     let newAnnotationView = CustomAnnotationView(annotation: annotation, reuseIdentifier: CustomAnnotationView.identifier)
@@ -42,6 +51,5 @@ class CustomAnnotationView: ClusterAnnotationView, Identifiable {
     
     return self
   }
-  
   
 }
