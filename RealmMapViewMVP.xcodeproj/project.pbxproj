@@ -96,10 +96,10 @@
 		E073670A1F68759D00F587AC = {
 			isa = PBXGroup;
 			children = (
-				E07367151F68759D00F587AC /* RealmMapViewMVP */,
-				E07367141F68759D00F587AC /* Products */,
-				0C0260B4F3E003189E8E1E16 /* Pods */,
 				CA28BC8953CD2646131DD205 /* Frameworks */,
+				0C0260B4F3E003189E8E1E16 /* Pods */,
+				E07367141F68759D00F587AC /* Products */,
+				E07367151F68759D00F587AC /* RealmMapViewMVP */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,13 +114,13 @@
 		E07367151F68759D00F587AC /* RealmMapViewMVP */ = {
 			isa = PBXGroup;
 			children = (
-				E07367491F69D27800F587AC /* Enums */,
-				E07367441F6893EF00F587AC /* Extension */,
-				E07367411F688F7800F587AC /* Protocols */,
-				E07367301F68792E00F587AC /* Navigation */,
-				E073672F1F6878AE00F587AC /* Managers */,
 				E073672A1F68780900F587AC /* Contexts */,
 				E073672E1F68787900F587AC /* CustomViews */,
+				E07367491F69D27800F587AC /* Enums */,
+				E07367441F6893EF00F587AC /* Extension */,
+				E073672F1F6878AE00F587AC /* Managers */,
+				E07367301F68792E00F587AC /* Navigation */,
+				E07367411F688F7800F587AC /* Protocols */,
 				E073672B1F68781300F587AC /* Resources */,
 			);
 			path = RealmMapViewMVP;
@@ -129,11 +129,12 @@
 		E073672A1F68780900F587AC /* Contexts */ = {
 			isa = PBXGroup;
 			children = (
-				E07367161F68759D00F587AC /* AppDelegate.swift */,
 				E073672C1F68782C00F587AC /* Map */,
 				E073672D1F68783500F587AC /* RestaurantDetails */,
+				E07367161F68759D00F587AC /* AppDelegate.swift */,
 			);
 			name = Contexts;
+			path = Contexts;
 			sourceTree = "<group>";
 		};
 		E073672B1F68781300F587AC /* Resources */ = {
@@ -144,26 +145,29 @@
 				E07367281F6877FD00F587AC /* Launch Screen.storyboard */,
 			);
 			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		E073672C1F68782C00F587AC /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				E07367351F68798300F587AC /* MapPresenter.swift */,
 				E07367311F68795200F587AC /* MapViewController.swift */,
 				E07367321F68795200F587AC /* MapViewController.xib */,
-				E07367351F68798300F587AC /* MapPresenter.swift */,
 			);
 			name = Map;
+			path = Map;
 			sourceTree = "<group>";
 		};
 		E073672D1F68783500F587AC /* RestaurantDetails */ = {
 			isa = PBXGroup;
 			children = (
+				E01969F91F6AFAAA0066E959 /* RestaurantDetailsPresenter.swift */,
 				E01969FB1F6AFB1C0066E959 /* RestaurantDetailsViewController.swift */,
 				E01969FC1F6AFB1C0066E959 /* RestaurantDetailsViewController.xib */,
-				E01969F91F6AFAAA0066E959 /* RestaurantDetailsPresenter.swift */,
 			);
 			name = RestaurantDetails;
+			path = RestaurantDetails;
 			sourceTree = "<group>";
 		};
 		E073672E1F68787900F587AC /* CustomViews */ = {
@@ -172,45 +176,50 @@
 				E073673F1F688F6200F587AC /* CustomAnnotationView.swift */,
 			);
 			name = CustomViews;
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		E073672F1F6878AE00F587AC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				E073673D1F687D9200F587AC /* RealmConfig.swift */,
 				E07367471F69CF7900F587AC /* LocationManager.swift */,
+				E073673D1F687D9200F587AC /* RealmConfig.swift */,
 			);
 			name = Managers;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		E07367301F68792E00F587AC /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				E073673B1F687A7500F587AC /* Navigator.swift */,
-				E07367371F687A1300F587AC /* NavigationTransitionType.swift */,
 				E07367391F687A2F00F587AC /* NavigationScene.swift */,
+				E07367371F687A1300F587AC /* NavigationTransitionType.swift */,
+				E073673B1F687A7500F587AC /* Navigator.swift */,
 			);
 			name = Navigation;
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		E07367411F688F7800F587AC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				E07367421F688F8500F587AC /* Identifiable.swift */,
 				E073674C1F69D76C00F587AC /* Alertable.swift */,
+				E07367421F688F8500F587AC /* Identifiable.swift */,
 			);
 			name = Protocols;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		E07367441F6893EF00F587AC /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				E07367451F68943D00F587AC /* UIColor.swift */,
 				E073674E1F69DADC00F587AC /* MKMapView.swift */,
+				E07367451F68943D00F587AC /* UIColor.swift */,
 				E0196A0E1F6B11950066E959 /* UITableView.swift */,
 				E0196A101F6B11C50066E959 /* UITableViewCell.swift */,
 			);
 			name = Extension;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		E07367491F69D27800F587AC /* Enums */ = {
@@ -220,6 +229,7 @@
 				E07367501F69DB6D00F587AC /* Result.swift */,
 			);
 			name = Enums;
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,7 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P8WVW27EH5;
-				INFOPLIST_FILE = RealmMapViewMVP/Info.plist;
+				INFOPLIST_FILE = RealmMapViewMVP/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amadeuandrade.RealmMapViewMVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -485,7 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P8WVW27EH5;
-				INFOPLIST_FILE = RealmMapViewMVP/Info.plist;
+				INFOPLIST_FILE = RealmMapViewMVP/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amadeuandrade.RealmMapViewMVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
