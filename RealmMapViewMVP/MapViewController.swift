@@ -20,10 +20,7 @@ class MapViewController: UIViewController, Alertable {
   // MARK: - IBOUTLETS
 
   @IBOutlet private weak var mapView: RealmMapView! {
-    didSet {
-      mapView.realmConfiguration = presenter.realmConfiguration
-      mapView.canShowCallout = false
-    }
+    didSet { mapView.realmConfiguration = presenter.realmConfiguration }
   }
 
   // MARK: - VIEW LIFE CYCLE
