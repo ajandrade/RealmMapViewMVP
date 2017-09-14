@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 import CoreLocation
+import RealmSwiftSFRestaurantData
 
 protocol MapPresenterRepresentable {
   var realmConfiguration: Realm.Configuration { get }
@@ -17,6 +18,8 @@ protocol MapPresenterRepresentable {
   var didUpdateAuthorization: ((Result<Void>)->Void)? { get set }
 
   func requestUserLocation()
+  
+  func showDetails(for restaurant: ABFRestaurantObject)
 }
 
 class MapPresenter: MapPresenterRepresentable {
@@ -24,6 +27,7 @@ class MapPresenter: MapPresenterRepresentable {
   // MARK: - DEPENDENCIES
   
   private var locationManager: LocationManagerProtocol
+  private let navigator: NavigatorRepresentable
   
   // MARK: - OUTPUT PROPERTIES
   
@@ -33,7 +37,8 @@ class MapPresenter: MapPresenterRepresentable {
 
   // MARK: - INITIALIZER
   
-  init(locationManager: LocationManagerProtocol) {
+  init(locationManager: LocationManagerProtocol, navigator: NavigatorRepresentable) {
+    self.navigator = navigator
     self.locationManager = locationManager
     
     self.locationManager.didUpdateUserLocation = { [weak self] result in
@@ -52,6 +57,13 @@ class MapPresenter: MapPresenterRepresentable {
         self?.didUpdateAuthorization?(.failure(error))
       }
     }
+  }
+  
+  // MARK: - NAVIGATION
+  
+  func showDetails(for restaurant: ABFRestaurantObject) {
+    let detailsPresenter = RestaurantDetailsPresenter()
+    navigator.transition(to: .details(detailsPresenter), type: .push)
   }
   
   // MARK: - METHODS

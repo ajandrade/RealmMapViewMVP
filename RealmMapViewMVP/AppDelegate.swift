@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow()
     let navigator = Navigator(window: window!)
     let locationManager = LocationManager()
-    let presenter = MapPresenter(locationManager: locationManager)
+    let presenter = MapPresenter(locationManager: locationManager, navigator: navigator)
     let rootViewController = NavigationScene.map(presenter)
     navigator.transition(to: rootViewController, type: .root)
 

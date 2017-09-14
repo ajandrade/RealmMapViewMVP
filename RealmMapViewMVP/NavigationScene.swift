@@ -10,6 +10,7 @@ import UIKit
 
 enum NavigationScene {
   case map(MapPresenterRepresentable)
+  case details(RestaurantDetailsPresenterRepresentable)
 }
 
 extension NavigationScene {
@@ -20,6 +21,10 @@ extension NavigationScene {
       let mapViewController = MapViewController()
       mapViewController.presenter = presenter
       return mapViewController
+    case .details(let presenter):
+      let detailsViewController = RestaurantDetailsViewController()
+      detailsViewController.presenter = presenter
+      return detailsViewController
     }
   }
   
